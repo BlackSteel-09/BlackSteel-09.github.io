@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackSteel-09 | Game Development</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Audio Player -->
+    <audio id="backgroundMusic" loop>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-text">BLACKSTEEL-09</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-slide="0">HOME</a></li>
+            <li><a href="#about" class="nav-link" data-slide="1">ABOUT</a></li>
+            <li><a href="#funland" class="nav-link" data-slide="2">FUNLAND</a></li>
+            <li><a href="#projects" class="nav-link" data-slide="3">PROJECTS</a></li>
+        </ul>
+        <div class="music-control">
+            <span class="material-icons" id="musicToggle">music_note</span>
+        </div>
+    </nav>
+
+    <!-- Slide Container -->
+    <div class="slides-container">
+        <!-- Home Slide -->
+        <div class="slide active" id="home">
+            <div class="banner-section">
+                <div class="banner-overlay"></div>
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="assets/profile.jpg" alt="BlackSteel-09" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkJTLTA5PC90ZXh0Pjwvc3ZnPg=='">
+                    </div>
+                    <h1 class="profile-name">BLACKSTEEL-09</h1>
+                    <p class="profile-tagline">"Making sure black and white pieces never fight again"</p>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon material-icons">sports_esports</span>
+                        <h3>Games Developed</h3>
+                        <p class="stat-number" data-target="12">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon material-icons">code</span>
+                        <h3>Lines of Code</h3>
+                        <p class="stat-number" data-target="50000">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon material-icons">school</span>
+                        <h3>Learning Projects</h3>
+                        <p class="stat-number" data-target="8">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon material-icons">group</span>
+                        <h3>AI Collaborations</h3>
+                        <p class="stat-number" data-target="3">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Slide -->
+        <div class="slide" id="about">
+            <div class="about-container">
+                <h2 class="section-title">ABOUT THE DEVELOPER</h2>
+                
+                <div class="about-content">
+                    <div class="developer-card">
+                        <div class="card-header">
+                            <span class="material-icons">person</span>
+                            <h3>BlackSteel-09</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Passionate game developer focused on creating engaging experiences that bridge entertainment and education. Specializing in:</p>
+                            <ul class="skills-list">
+                                <li>Game Development & Design</li>
+                                <li>Interactive Learning Experiences</li>
+                                <li>Probability & Strategy Games</li>
+                                <li>AI-Assisted Development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="developer-card ai-card">
+                        <div class="card-header">
+                            <span class="material-icons">smart_toy</span>
+                            <h3>AI Development Buddy</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>My trusted AI companion that helps with:</p>
+                            <ul class="skills-list">
+                                <li>Code Optimization & Debugging</li>
+                                <li>Game Mechanics Design</li>
+                                <li>Creative Problem Solving</li>
+                                <li>Learning New Technologies</li>
+                            </ul>
+                            <div class="ai-status">
+                                <span class="status-indicator"></span>
+                                <span>Currently Online & Collaborating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="philosophy-section">
+                    <h3>Development Philosophy</h3>
+                    <p class="philosophy-text">
+                        "Creating games where every piece has its place, and competition becomes collaboration. 
+                        Through thoughtful design, we transform traditional conflicts into harmonious gameplay experiences."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Funland Slide -->
+        <div class="slide" id="funland">
+            <div class="funland-container">
+                <h2 class="section-title">FUNLAND ARCADE</h2>
+                
+                <div class="games-grid">
+                    <!-- Quiz Game -->
+                    <div class="game-card">
+                        <div class="game-icon">
+                            <span class="material-icons">quiz</span>
+                        </div>
+                        <h3>Quick Quiz</h3>
+                        <p>Test your knowledge with random questions</p>
+                        <button class="game-btn" onclick="startQuiz()">PLAY NOW</button>
+                    </div>
+
+                    <!-- Fun Fact -->
+                    <div class="game-card">
+                        <div class="game-icon">
+                            <span class="material-icons">emoji_objects</span>
+                        </div>
+                        <h3>Fun Fact Generator</h3>
+                        <p>Discover interesting facts about gaming</p>
+                        <button class="game-btn" onclick="showFunFact()">SHOW FACT</button>
+                    </div>
+
+                    <!-- Coin Flip -->
+                    <div class="game-card">
+                        <div class="game-icon">
+                            <span class="material-icons">monetization_on</span>
+                        </div>
+                        <h3>Probability Challenge</h3>
+                        <p>Flip coins and test your luck</p>
+                        <button class="game-btn" onclick="startCoinGame()">FLIP COIN</button>
+                    </div>
+
+                    <!-- Prize Pool -->
+                    <div class="game-card">
+                        <div class="game-icon">
+                            <span class="material-icons">card_giftcard</span>
+                        </div>
+                        <h3>Mystery Prize Pool</h3>
+                        <p>20 boxes, one lucky winner?</p>
+                        <button class="game-btn" onclick="openPrizePool()">OPEN BOXES</button>
+                    </div>
+                </div>
+
+                <!-- Game Output Areas -->
+                <div id="quizOutput" class="game-output"></div>
+                <div id="factOutput" class="game-output"></div>
+                <div id="coinOutput" class="game-output"></div>
+                
+                <!-- Prize Pool Modal -->
+                <div id="prizeModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <h3>MYSTERY PRIZE POOL</h3>
+                        <div class="boxes-grid" id="boxesContainer"></div>
+                        <div id="prizeResult"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Slide -->
+        <div class="slide" id="projects">
+            <div class="projects-container">
+                <h2 class="section-title">PROJECT SHOWCASE</h2>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <span class="material-icons">videogame_asset</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Chess Harmony</h3>
+                            <p>A collaborative chess variant where pieces work together instead of competing</p>
+                            <div class="project-tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">Multiplayer</span>
+                            </div>
+                            <button class="project-btn">VIEW PROJECT</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <span class="material-icons">psychology</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Probability Explorer</h3>
+                            <p>Educational game teaching probability through interactive simulations</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                                <span class="tag">Education</span>
+                            </div>
+                            <button class="project-btn">VIEW PROJECT</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <span class="material-icons">auto_awesome</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>AI Learning Companion</h3>
+                            <p>Game development assistant powered by machine learning</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">AI</span>
+                            </div>
+                            <button class="project-btn">VIEW PROJECT</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <span class="material-icons">dashboard</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Game Engine Prototype</h3>
+                            <p>Custom game engine built from scratch for educational purposes</p>
+                            <div class="project-tags">
+                                <span class="tag">C++</span>
+                                <span class="tag">OpenGL</span>
+                                <span class="tag">Engine</span>
+                            </div>
+                            <button class="project-btn">VIEW PROJECT</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="github-section">
+                    <h3>Full Project Repository</h3>
+                    <p>Explore all my projects, experiments, and learning journeys</p>
+                    <a href="https://github.com/BlackSteel-09/projects" class="github-btn" target="_blank">
+                        <span class="material-icons">folder</span>
+                        VIEW PROJECTS DUMP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide Controls -->
+    <div class="slide-controls">
+        <button class="slide-btn prev-btn">
+            <span class="material-icons">chevron_left</span>
+        </button>
+        <div class="slide-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+        </div>
+        <button class="slide-btn next-btn">
+            <span class="material-icons">chevron_right</span>
+        </button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
